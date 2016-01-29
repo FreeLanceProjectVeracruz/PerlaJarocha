@@ -6,15 +6,15 @@ package model.jhernandez.enums;
  */
 public enum Icons {
 
-    BulletError("/mx/com/jhernandez/icons/bullet_error.png"),
-    Help("/mx/com/jhernandez/icons/Help-icon.png"),
-    Bold("/mx/com/jhernandez/icons/text_bold.png"),
-    Italic("/mx/com/jhernandez/icons/text_italic.png"),
-    Underline("/mx/com/jhernandez/icons/text_underline.png"),
-    Printer("/mx/com/jhernandez/icons/printer.png"),
-    Save("/mx/com/jhernandez/icons/database_save.png"),
-    ZoomIn("/mx/com/jhernandez/icons/magnifier_zoom_in.png"),
-    ZoomOut("/mx/com/jhernandez/icons/magifier_zoom_out.png");
+    BulletError("/view/jhernandez/icons/bullet_error.png"),
+    Help("/view/jhernandez/icons/Help-icon.png"),
+    Bold("/view/jhernandez/icons/text_bold.png"),
+    Italic("/view/jhernandez/icons/text_italic.png"),
+    Underline("/view/jhernandez/icons/text_underline.png"),
+    Printer("/view/jhernandez/icons/printer.png"),
+    Save("/view/jhernandez/icons/database_save.png"),
+    ZoomIn("/view/jhernandez/icons/magnifier_zoom_in.png"),
+    ZoomOut("/view/jhernandez/icons/magifier_zoom_out.png");
 
     String iconfilename;
 

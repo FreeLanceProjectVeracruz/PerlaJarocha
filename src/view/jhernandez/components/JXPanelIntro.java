@@ -31,8 +31,8 @@ public class JXPanelIntro extends JXPanel {
         textImagePainter.setHorizontalAlignment(AbstractLayoutPainter.HorizontalAlignment.LEFT);
         textImagePainter.setVerticalAlignment(AbstractLayoutPainter.VerticalAlignment.TOP);
 
-        Image image = new ImageIcon(JXPanelIntro.class.getResource("/mx/com/jhernandez/images/promotions/home_notext.png")).getImage();
-        Image image2 = new ImageIcon(JXPanelIntro.class.getResource("/mx/com/jhernandez/images/promotions/home_text.png")).getImage();
+        Image image = new ImageIcon(JXPanelIntro.class.getResource("/view/jhernandez/images/promotions/home_notext.png")).getImage();
+        Image image2 = new ImageIcon(JXPanelIntro.class.getResource("/view/jhernandez/images/promotions/home_text.png")).getImage();
 
         this.setIntroImage(image);
         this.setTextImage(image2);
