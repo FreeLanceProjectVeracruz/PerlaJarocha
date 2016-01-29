@@ -1,2 +1,2 @@
-2016-01-28 19:04:17,528 INFO main [controller.jhernandez.host.Host] - Iniciando aplicación..
-2016-01-28 19:04:19,716 INFO AWT-EventQueue-0 [model.jhernandez.dataAccess.DataAccess] - Conexión a MYSQL: true
+2016-01-28 20:21:14,904 INFO main [controller.jhernandez.host.Host] - Iniciando aplicación..
+2016-01-28 20:21:18,945 INFO AWT-EventQueue-0 [model.jhernandez.dataAccess.DataAccess] - Conexión a MYSQL: true
