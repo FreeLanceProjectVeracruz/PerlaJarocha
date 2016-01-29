@@ -6,7 +6,7 @@ import java.net.URL;
  *
  * @author WIN 8
  */
-public class ModelProperties {
+public class GeneralProperties {
 
     private final String dbMysql = "/model/jhernandez/configuration/config.properties";
 

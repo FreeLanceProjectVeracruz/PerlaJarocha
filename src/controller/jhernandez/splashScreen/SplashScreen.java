@@ -1,8 +1,8 @@
 package controller.jhernandez.splashScreen;
 
+import model.jhernandez.configuration.*;
 import java.awt.*;
 import java.io.IOException;
-import model.jhernandez.configuration.*;
 import model.jhernandez.dataAccess.*;
 import org.apache.log4j.*;
 
@@ -37,7 +37,7 @@ public class SplashScreen {
                     splash.update();
                     switch (i) {
                         case 1:
-                            new ReadProperties(new ModelProperties().getFileDbMysql());
+                            new DataBaseProperties(new GeneralProperties().getFileDbMysql());
                             break;
                         case 2:
                             DataAccess.getInstance();

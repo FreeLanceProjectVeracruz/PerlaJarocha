@@ -1,9 +1,9 @@
 package model.jhernandez.dataAccess;
 
+import model.jhernandez.configuration.*;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
-import model.jhernandez.configuration.*;
 import org.apache.log4j.*;
 
 /**
@@ -28,7 +28,7 @@ public class DataAccess {
      *
      * @param rdMysql
      */
-    public DataAccess(ReadProperties rdMysql) {
+    public DataAccess(DataBaseProperties rdMysql) {
         this.ipHost = rdMysql.getIpHost();
         this.puerto = rdMysql.getPuerto();
         this.baseDatos = rdMysql.getBasedatos();
@@ -124,7 +124,7 @@ public class DataAccess {
                 if (localInstance == null) {
                     try {
                         INSTANCE = localInstance = new DataAccess(
-                                new ReadProperties(new ModelProperties().getFileDbMysql()));
+                                new DataBaseProperties(new GeneralProperties().getFileDbMysql()));
                         log.info("Conexión a MYSQL: " + localInstance.connectBD());
                     } catch (IOException | ClassNotFoundException | InstantiationException |
                             IllegalAccessException | SQLException ex) {

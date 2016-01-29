@@ -1,5 +1,9 @@
 package model.jhernandez.configuration;
 
+/**
+ *
+ * @author WIN 8
+ */
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -7,11 +11,7 @@ import java.util.Arrays;
 import java.util.Properties;
 import org.apache.log4j.Logger;
 
-/**
- *
- * @author WIN 8
- */
-public class ReadProperties {
+public class DataBaseProperties {
 
     private java.net.URL ruta;
     private String ipHost;
@@ -20,7 +20,7 @@ public class ReadProperties {
     private String usuario;
     private String contrasena;
     private String gestor;
-    static final Logger log = Logger.getLogger(ReadProperties.class);
+    static final Logger log = Logger.getLogger(DataBaseProperties.class);
 
     /**
      * Constructor
@@ -28,7 +28,7 @@ public class ReadProperties {
      * @param path
      * @throws IOException
      */
-    public ReadProperties(URL path) throws IOException {
+    public DataBaseProperties(URL path) throws IOException {
         this.ruta = path;
         init();
     }
