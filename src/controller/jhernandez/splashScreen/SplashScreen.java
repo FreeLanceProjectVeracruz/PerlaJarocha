@@ -29,6 +29,8 @@ public class SplashScreen {
      * @return
      */
     public boolean loadingSplash() {
+        boolean flag = true;
+
         try {
             if (splash != null) {
                 Graphics2D g = splash.createGraphics();
@@ -48,9 +50,11 @@ public class SplashScreen {
 
                     Thread.sleep(800);
                 }
+
+                flag = true;
                 splash.close();
             }
-            return true;
+            return flag;
         } catch (IllegalStateException | IOException | InterruptedException e) {
             log.error(e.getMessage());
             return false;

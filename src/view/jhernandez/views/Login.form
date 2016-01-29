@@ -211,7 +211,7 @@
             <Component class="javax.swing.JLabel" name="advertencia">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/mx/com/jhernandez/icons/bullet_error.png"/>
+                  <Image iconType="3" name="/view/jhernandez/icons/bullet_error.png"/>
                 </Property>
               </Properties>
             </Component>

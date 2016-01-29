@@ -89,7 +89,7 @@ public class Login extends JDialog {
         panelMsj.setPreferredSize(new java.awt.Dimension(280, 40));
         panelMsj.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        advertencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/jhernandez/icons/bullet_error.png"))); // NOI18N
+        advertencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jhernandez/icons/bullet_error.png"))); // NOI18N
         panelMsj.add(advertencia);
 
         mensaje.setPreferredSize(new java.awt.Dimension(250, 30));
