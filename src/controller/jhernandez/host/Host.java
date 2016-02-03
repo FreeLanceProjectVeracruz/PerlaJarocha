@@ -23,7 +23,8 @@ public class Host {
      */
     public static void main(String[] args) {
         log.info("Iniciando aplicación..");
-
+        log.info("Commit de Viruz");
+        
         try {
             SwingUtilities.invokeAndWait(() -> {
                 loaded = new SplashScreen().loadingSplash();
