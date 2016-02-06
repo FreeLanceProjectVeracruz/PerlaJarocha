@@ -60,6 +60,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
 
     // <editor-fold defaultstate="expanded" desc="Private fields Controllers">
     private ControllerLogin controllerLogin;
+    private ControllerEmployees controllerEmployee;
     // </editor-fold>
 
     // <editor-fold defaultstate="expanded" desc="Private fields JCommandButton">
@@ -140,6 +141,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         this.viewServices = new Services();
 
         this.controllerLogin = new ControllerLogin(this.viewLogin, this.modelLogin);
+        this.controllerEmployee = new ControllerEmployees(this.viewEmployees);
     }
     // </editor-fold>
 
@@ -660,11 +662,14 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
     // <editor-fold defaultstate="expanded" desc="Métodos de Panel Sur">
     private void setSouthPanel() {
         JPanelRound panelMain = new JPanelRound();
-        panelMain.setLayout(new GridLayout(0, 3));
+        panelMain.setLayout(new GridLayout(1, 3));
         panelMain.setBorder(new EmptyBorder(3, 8, 3, 8));
 
         //CENTER
         this.horario = new JLabel();
+        this.horario.setHorizontalTextPosition(JLabel.CENTER);
+        this.horario.setHorizontalAlignment(JLabel.RIGHT);
+
         this.formato = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         this.dataSistema = new Date();
 
@@ -675,10 +680,10 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         JLabel connection = new JLabel();
         connection.setText(DataAccess.getInstance().getUrlConnection());
         connection.setIcon(UtilsImages.getIcon(Principal.class.getClass().getResource(Images.BasedeDatos.getRuta()), 32, 32));
-        
+
         //EAST
         JPanel panelEAST = new JPanel();
-        panelEAST.setLayout(new FlowLayout());
+        panelEAST.setLayout(new FlowLayout(FlowLayout.RIGHT));
 //        panelEAST.setOpaque(false);
 //        panelEAST.setBackground(new Color(0, 0, 0, 55));
 
@@ -690,9 +695,6 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         panelEAST.add(user);
         panelEAST.add(this.viewPrincipal.imagen);
 
-//        panelMain.add(this.horario, BorderLayout.CENTER);
-//        panelMain.add(connection, BorderLayout.WEST);
-//        panelMain.add(panelEAST, BorderLayout.EAST);
         panelMain.add(connection);
         panelMain.add(this.horario);
         panelMain.add(panelEAST);

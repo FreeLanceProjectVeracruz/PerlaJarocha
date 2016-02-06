@@ -21,6 +21,7 @@ public class Employees extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jToolBar1 = new javax.swing.JToolBar();
         jBAgregar = new javax.swing.JButton();
@@ -33,23 +34,26 @@ public class Employees extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         Photo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        Izquierda = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
+        Derecha = new javax.swing.JPanel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox();
         jXDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
 
         setLayout(new java.awt.BorderLayout());
 
+        jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
         jBAgregar.setForeground(new java.awt.Color(255, 255, 255));
@@ -78,11 +82,12 @@ public class Employees extends javax.swing.JPanel {
 
         add(jToolBar1, java.awt.BorderLayout.PAGE_START);
 
-        jPanelCenter.setLayout(new java.awt.GridLayout());
+        jPanelCenter.setLayout(new java.awt.BorderLayout());
+
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(400, 400));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                { new Integer(1), "Jennifer Aniston"},
                 {null, null},
                 {null, null},
                 {null, null}
@@ -115,7 +120,7 @@ public class Employees extends javax.swing.JPanel {
             jTable1.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jPanelCenter.add(jScrollPane1);
+        jPanelCenter.add(jScrollPane1, java.awt.BorderLayout.WEST);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED), "Datos del empleado"));
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -131,54 +136,91 @@ public class Employees extends javax.swing.JPanel {
         jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel3.setLayout(new java.awt.GridLayout(8, 2, 0, 20));
+        jPanel3.setLayout(new java.awt.BorderLayout());
+
+        Izquierda.setLayout(new org.jdesktop.swingx.VerticalLayout());
 
         jLabel3.setText("Clave:");
-        jPanel3.add(jLabel3);
-        jPanel3.add(jTextField2);
+        jLabel3.setMinimumSize(new java.awt.Dimension(15, 15));
+        jLabel3.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLabel3);
 
         jLabel4.setText("Nombre:");
-        jPanel3.add(jLabel4);
-        jPanel3.add(jTextField3);
+        jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLabel4);
 
         jLabel5.setText("Domicilio:");
-        jPanel3.add(jLabel5);
+        jLabel5.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLabel5.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLabel5);
+
+        jLabel1.setText("Celular:");
+        jLabel1.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLabel1.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLabel1);
+
+        jLabel2.setText("Correo Electronico:");
+        jLabel2.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLabel2.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLabel2);
+
+        jLabel6.setText("Puesto:");
+        jLabel6.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLabel6.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLabel6);
+
+        jLabel7.setText("Fecha de Ingreso:");
+        jLabel7.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLabel7.setPreferredSize(new java.awt.Dimension(100, 40));
+        jLabel7.setRequestFocusEnabled(false);
+        Izquierda.add(jLabel7);
+
+        jPanel3.add(Izquierda, java.awt.BorderLayout.WEST);
+
+        org.jdesktop.swingx.VerticalLayout verticalLayout1 = new org.jdesktop.swingx.VerticalLayout();
+        verticalLayout1.setGap(5);
+        Derecha.setLayout(verticalLayout1);
+
+        jTextField2.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jTextField2);
+
+        jTextField3.setPreferredSize(new java.awt.Dimension(100, 35));
+        jTextField3.setRequestFocusEnabled(false);
+        Derecha.add(jTextField3);
 
         jTextField4.setToolTipText("");
+        jTextField4.setPreferredSize(new java.awt.Dimension(100, 35));
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField4);
+        Derecha.add(jTextField4);
 
-        jLabel1.setText("Celular:");
-        jPanel3.add(jLabel1);
-        jPanel3.add(jTextField1);
+        jTextField1.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jTextField1);
 
-        jLabel2.setText("Correo Electronico:");
-        jPanel3.add(jLabel2);
-
+        jTextField5.setPreferredSize(new java.awt.Dimension(100, 35));
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField5);
-
-        jLabel6.setText("Puesto:");
-        jPanel3.add(jLabel6);
+        Derecha.add(jTextField5);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(jComboBox1);
+        jComboBox1.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jComboBox1);
 
-        jLabel7.setText("Fecha de Ingreso:");
-        jPanel3.add(jLabel7);
-        jPanel3.add(jXDatePicker1);
+        jXDatePicker1.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jXDatePicker1);
+
+        jPanel3.add(Derecha, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.CENTER);
 
-        jPanelCenter.add(jPanel1);
+        jPanelCenter.add(jPanel1, java.awt.BorderLayout.CENTER);
 
         add(jPanelCenter, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -193,8 +235,10 @@ public class Employees extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Photo;
-    private javax.swing.JButton jBAgregar;
+    private javax.swing.JPanel Derecha;
+    private javax.swing.JPanel Izquierda;
+    public javax.swing.JLabel Photo;
+    public javax.swing.JButton jBAgregar;
     private javax.swing.JButton jBBuscar;
     private javax.swing.JButton jBEliminar;
     private javax.swing.JComboBox jComboBox1;
