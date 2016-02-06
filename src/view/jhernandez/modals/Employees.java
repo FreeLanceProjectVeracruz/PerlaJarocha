@@ -21,72 +21,76 @@ public class Employees extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        jToolBar1 = new javax.swing.JToolBar();
+        jTBContenedorBontones = new javax.swing.JToolBar();
         jBAgregar = new javax.swing.JButton();
         jBEliminar = new javax.swing.JButton();
         jBBuscar = new javax.swing.JButton();
+        jBModificar = new javax.swing.JButton();
         jPanelCenter = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jTClaveEmp = new javax.swing.JTable();
+        jPDatosEmpleado = new javax.swing.JPanel();
+        jPFoto = new javax.swing.JPanel();
         Photo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         Izquierda = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLClave = new javax.swing.JLabel();
+        jLNombre = new javax.swing.JLabel();
+        jLDomicilio = new javax.swing.JLabel();
+        jLCelular = new javax.swing.JLabel();
+        jLCorreoE = new javax.swing.JLabel();
+        jLPuesto = new javax.swing.JLabel();
+        jLFechaIng = new javax.swing.JLabel();
         Derecha = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jXDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
+        jTFClave = new javax.swing.JTextField();
+        jTFNombre = new javax.swing.JTextField();
+        jTFDomicilio = new javax.swing.JTextField();
+        jTFCelular = new javax.swing.JTextField();
+        jTFCorreoE = new javax.swing.JTextField();
+        jCBPuesto = new javax.swing.JComboBox();
+        jXDPCalendario = new org.jdesktop.swingx.JXDatePicker();
 
         setLayout(new java.awt.BorderLayout());
 
-        jToolBar1.setFloatable(false);
-        jToolBar1.setRollover(true);
+        jTBContenedorBontones.setFloatable(false);
+        jTBContenedorBontones.setRollover(true);
 
         jBAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        jBAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jhernandez/images/agregar.png"))); // NOI18N
         jBAgregar.setText("Agregar");
         jBAgregar.setFocusable(false);
         jBAgregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBAgregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jBAgregar);
+        jTBContenedorBontones.add(jBAgregar);
 
         jBEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jBEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jhernandez/images/remover.png"))); // NOI18N
         jBEliminar.setText("Eliminar");
         jBEliminar.setFocusable(false);
         jBEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBEliminar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jBEliminar);
+        jTBContenedorBontones.add(jBEliminar);
 
         jBBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        jBBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jhernandez/images/buscar.png"))); // NOI18N
         jBBuscar.setText("Buscar");
         jBBuscar.setFocusable(false);
         jBBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBBuscar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jBBuscar);
+        jTBContenedorBontones.add(jBBuscar);
 
-        add(jToolBar1, java.awt.BorderLayout.PAGE_START);
+        jBModificar.setForeground(new java.awt.Color(255, 255, 255));
+        jBModificar.setText("Modificar");
+        jBModificar.setFocusable(false);
+        jBModificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBModificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jTBContenedorBontones.add(jBModificar);
+
+        add(jTBContenedorBontones, java.awt.BorderLayout.PAGE_START);
 
         jPanelCenter.setLayout(new java.awt.BorderLayout());
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(400, 400));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTClaveEmp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -111,70 +115,76 @@ public class Employees extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setColumnSelectionAllowed(true);
-        jTable1.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(jTable1);
-        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
+        jTClaveEmp.setColumnSelectionAllowed(true);
+        jTClaveEmp.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jTClaveEmp.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(jTClaveEmp);
+        jTClaveEmp.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        if (jTClaveEmp.getColumnModel().getColumnCount() > 0) {
+            jTClaveEmp.getColumnModel().getColumn(0).setResizable(false);
+            jTClaveEmp.getColumnModel().getColumn(1).setResizable(false);
         }
 
         jPanelCenter.add(jScrollPane1, java.awt.BorderLayout.WEST);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED), "Datos del empleado"));
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        jPDatosEmpleado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED), "Datos del empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Book Antiqua", 3, 14))); // NOI18N
+        jPDatosEmpleado.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        jPFoto.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        Photo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Photo.setText("Photo");
         Photo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Photo.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPanel2.add(Photo);
+        jPFoto.add(Photo);
 
-        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        jPDatosEmpleado.add(jPFoto, java.awt.BorderLayout.PAGE_START);
 
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
         Izquierda.setLayout(new org.jdesktop.swingx.VerticalLayout());
 
-        jLabel3.setText("Clave:");
-        jLabel3.setMinimumSize(new java.awt.Dimension(15, 15));
-        jLabel3.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLabel3);
+        jLClave.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLClave.setText("Clave:");
+        jLClave.setMinimumSize(new java.awt.Dimension(15, 15));
+        jLClave.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLClave);
 
-        jLabel4.setText("Nombre:");
-        jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel4.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLabel4);
+        jLNombre.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLNombre.setText("Nombre:");
+        jLNombre.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLNombre.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLNombre);
 
-        jLabel5.setText("Domicilio:");
-        jLabel5.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLabel5.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLabel5);
+        jLDomicilio.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLDomicilio.setText("Domicilio:");
+        jLDomicilio.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLDomicilio.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLDomicilio);
 
-        jLabel1.setText("Celular:");
-        jLabel1.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLabel1.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLabel1);
+        jLCelular.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLCelular.setText("Celular:");
+        jLCelular.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLCelular.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLCelular);
 
-        jLabel2.setText("Correo Electronico:");
-        jLabel2.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLabel2.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLabel2);
+        jLCorreoE.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLCorreoE.setText("EMail:");
+        jLCorreoE.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLCorreoE.setPreferredSize(new java.awt.Dimension(110, 40));
+        Izquierda.add(jLCorreoE);
 
-        jLabel6.setText("Puesto:");
-        jLabel6.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLabel6.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLabel6);
+        jLPuesto.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLPuesto.setText("Puesto:");
+        jLPuesto.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLPuesto.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLPuesto);
 
-        jLabel7.setText("Fecha de Ingreso:");
-        jLabel7.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLabel7.setPreferredSize(new java.awt.Dimension(100, 40));
-        jLabel7.setRequestFocusEnabled(false);
-        Izquierda.add(jLabel7);
+        jLFechaIng.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLFechaIng.setText("Fecha de Ingreso:");
+        jLFechaIng.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLFechaIng.setPreferredSize(new java.awt.Dimension(100, 40));
+        jLFechaIng.setRequestFocusEnabled(false);
+        Izquierda.add(jLFechaIng);
 
         jPanel3.add(Izquierda, java.awt.BorderLayout.WEST);
 
@@ -182,56 +192,56 @@ public class Employees extends javax.swing.JPanel {
         verticalLayout1.setGap(5);
         Derecha.setLayout(verticalLayout1);
 
-        jTextField2.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jTextField2);
+        jTFClave.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jTFClave);
 
-        jTextField3.setPreferredSize(new java.awt.Dimension(100, 35));
-        jTextField3.setRequestFocusEnabled(false);
-        Derecha.add(jTextField3);
+        jTFNombre.setPreferredSize(new java.awt.Dimension(100, 35));
+        jTFNombre.setRequestFocusEnabled(false);
+        Derecha.add(jTFNombre);
 
-        jTextField4.setToolTipText("");
-        jTextField4.setPreferredSize(new java.awt.Dimension(100, 35));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jTFDomicilio.setToolTipText("");
+        jTFDomicilio.setPreferredSize(new java.awt.Dimension(100, 35));
+        jTFDomicilio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jTFDomicilioActionPerformed(evt);
             }
         });
-        Derecha.add(jTextField4);
+        Derecha.add(jTFDomicilio);
 
-        jTextField1.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jTextField1);
+        jTFCelular.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jTFCelular);
 
-        jTextField5.setPreferredSize(new java.awt.Dimension(100, 35));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jTFCorreoE.setPreferredSize(new java.awt.Dimension(100, 35));
+        jTFCorreoE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jTFCorreoEActionPerformed(evt);
             }
         });
-        Derecha.add(jTextField5);
+        Derecha.add(jTFCorreoE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jComboBox1);
+        jCBPuesto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCBPuesto.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jCBPuesto);
 
-        jXDatePicker1.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jXDatePicker1);
+        jXDPCalendario.setPreferredSize(new java.awt.Dimension(100, 35));
+        Derecha.add(jXDPCalendario);
 
         jPanel3.add(Derecha, java.awt.BorderLayout.CENTER);
 
-        jPanel1.add(jPanel3, java.awt.BorderLayout.CENTER);
+        jPDatosEmpleado.add(jPanel3, java.awt.BorderLayout.CENTER);
 
-        jPanelCenter.add(jPanel1, java.awt.BorderLayout.CENTER);
+        jPanelCenter.add(jPDatosEmpleado, java.awt.BorderLayout.CENTER);
 
         add(jPanelCenter, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTFDomicilioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFDomicilioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTFDomicilioActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jTFCorreoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCorreoEActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jTFCorreoEActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -239,28 +249,29 @@ public class Employees extends javax.swing.JPanel {
     private javax.swing.JPanel Izquierda;
     public javax.swing.JLabel Photo;
     public javax.swing.JButton jBAgregar;
-    private javax.swing.JButton jBBuscar;
-    private javax.swing.JButton jBEliminar;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    public javax.swing.JButton jBBuscar;
+    public javax.swing.JButton jBEliminar;
+    public javax.swing.JButton jBModificar;
+    private javax.swing.JComboBox jCBPuesto;
+    private javax.swing.JLabel jLCelular;
+    private javax.swing.JLabel jLClave;
+    private javax.swing.JLabel jLCorreoE;
+    private javax.swing.JLabel jLDomicilio;
+    private javax.swing.JLabel jLFechaIng;
+    private javax.swing.JLabel jLNombre;
+    private javax.swing.JLabel jLPuesto;
+    private javax.swing.JPanel jPDatosEmpleado;
+    private javax.swing.JPanel jPFoto;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelCenter;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JToolBar jToolBar1;
-    private org.jdesktop.swingx.JXDatePicker jXDatePicker1;
+    private javax.swing.JToolBar jTBContenedorBontones;
+    private javax.swing.JTable jTClaveEmp;
+    private javax.swing.JTextField jTFCelular;
+    private javax.swing.JTextField jTFClave;
+    private javax.swing.JTextField jTFCorreoE;
+    private javax.swing.JTextField jTFDomicilio;
+    private javax.swing.JTextField jTFNombre;
+    private org.jdesktop.swingx.JXDatePicker jXDPCalendario;
     // End of variables declaration//GEN-END:variables
 }

@@ -92,7 +92,7 @@ public class ControllerLogin implements IControllerBase, ActionListener {
             }
         } else if (control.equals(this.viewLogin.cancelar)) {
             this.viewLogin.dispose();
-            this.viewLogin.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+//            this.viewLogin.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
 
             System.exit(0);
         }

@@ -34,7 +34,12 @@ public enum Images {
     CambiarSesion("/view/jhernandez/images/Log-Out.png"),
     Salir("/view/jhernandez/images/Apps-session-logout.png"),
     Logo("/view/jhernandez/images/Beer-logo.png"),
-    BasedeDatos("/view/jhernandez/images/Misc-Upload-Database.png");
+    BasedeDatos("/view/jhernandez/images/Misc-Upload-Database.png"),
+    Agregar("/view/jhernandez/images/agregar.png"), 
+    Eliminar("/view/jhernandez/images/remover.png"), 
+    Buscar("/view/jhernandez/images/buscar.png"), 
+    Modificar("/view/jhernandez/images/editar.png"), 
+    NoPhoto("/view/jhernandez/images/noFoto.png");
 
     String imagefilename;
 
