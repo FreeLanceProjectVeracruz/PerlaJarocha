@@ -675,7 +675,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         JLabel connection = new JLabel();
         connection.setText(DataAccess.getInstance().getUrlConnection());
         connection.setIcon(UtilsImages.getIcon(Principal.class.getClass().getResource(Images.BasedeDatos.getRuta()), 32, 32));
-
+        
         //EAST
         JPanel panelEAST = new JPanel();
         panelEAST.setLayout(new FlowLayout());
