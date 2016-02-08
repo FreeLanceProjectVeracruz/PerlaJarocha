@@ -28,28 +28,33 @@ public class Employees extends javax.swing.JPanel {
         jBBuscar = new javax.swing.JButton();
         jBModificar = new javax.swing.JButton();
         jPanelCenter = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTClaveEmp = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jXTable1 = new org.jdesktop.swingx.JXTable();
         jPDatosEmpleado = new javax.swing.JPanel();
         jPFoto = new javax.swing.JPanel();
-        Photo = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         Izquierda = new javax.swing.JPanel();
         jLClave = new javax.swing.JLabel();
-        jLNombre = new javax.swing.JLabel();
-        jLDomicilio = new javax.swing.JLabel();
-        jLCelular = new javax.swing.JLabel();
-        jLCorreoE = new javax.swing.JLabel();
-        jLPuesto = new javax.swing.JLabel();
-        jLFechaIng = new javax.swing.JLabel();
-        Derecha = new javax.swing.JPanel();
         jTFClave = new javax.swing.JTextField();
+        jLNombre = new javax.swing.JLabel();
         jTFNombre = new javax.swing.JTextField();
+        jLDomicilio = new javax.swing.JLabel();
         jTFDomicilio = new javax.swing.JTextField();
+        jLCelular = new javax.swing.JLabel();
         jTFCelular = new javax.swing.JTextField();
+        jLCorreoE = new javax.swing.JLabel();
         jTFCorreoE = new javax.swing.JTextField();
+        Centro = new javax.swing.JPanel();
+        jLPuesto = new javax.swing.JLabel();
         jCBPuesto = new javax.swing.JComboBox();
+        jLFechaIng = new javax.swing.JLabel();
         jXDPCalendario = new org.jdesktop.swingx.JXDatePicker();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        Derecha = new javax.swing.JPanel();
+        Photo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -86,62 +91,42 @@ public class Employees extends javax.swing.JPanel {
 
         add(jTBContenedorBontones, java.awt.BorderLayout.PAGE_START);
 
+        jPanelCenter.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos del empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Book Antiqua", 3, 14))); // NOI18N
         jPanelCenter.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(400, 400));
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(302, 300));
 
-        jTClaveEmp.setModel(new javax.swing.table.DefaultTableModel(
+        jXTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Número", "Nombre"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
+        ));
+        jXTable1.setShowGrid(true);
+        jXTable1.setShowVerticalLines(false);
+        jScrollPane2.setViewportView(jXTable1);
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+        jPanelCenter.add(jScrollPane2, java.awt.BorderLayout.NORTH);
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTClaveEmp.setColumnSelectionAllowed(true);
-        jTClaveEmp.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jTClaveEmp.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(jTClaveEmp);
-        jTClaveEmp.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        if (jTClaveEmp.getColumnModel().getColumnCount() > 0) {
-            jTClaveEmp.getColumnModel().getColumn(0).setResizable(false);
-            jTClaveEmp.getColumnModel().getColumn(1).setResizable(false);
-        }
-
-        jPanelCenter.add(jScrollPane1, java.awt.BorderLayout.WEST);
-
-        jPDatosEmpleado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED), "Datos del empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Book Antiqua", 3, 14))); // NOI18N
+        jPDatosEmpleado.setPreferredSize(new java.awt.Dimension(978, 450));
         jPDatosEmpleado.setLayout(new java.awt.BorderLayout());
 
         jPFoto.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        Photo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Photo.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPFoto.add(Photo);
-
         jPDatosEmpleado.add(jPFoto, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel3.setLayout(new java.awt.BorderLayout());
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(966, 316));
 
-        Izquierda.setLayout(new org.jdesktop.swingx.VerticalLayout());
+        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
+
+        Izquierda.setPreferredSize(new java.awt.Dimension(450, 300));
+        Izquierda.setLayout(new java.awt.GridLayout(5, 2, 0, 40));
 
         jLClave.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
         jLClave.setText("Clave:");
@@ -149,55 +134,24 @@ public class Employees extends javax.swing.JPanel {
         jLClave.setPreferredSize(new java.awt.Dimension(100, 40));
         Izquierda.add(jLClave);
 
+        jTFClave.setPreferredSize(new java.awt.Dimension(100, 35));
+        Izquierda.add(jTFClave);
+
         jLNombre.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
         jLNombre.setText("Nombre:");
         jLNombre.setMinimumSize(new java.awt.Dimension(0, 0));
         jLNombre.setPreferredSize(new java.awt.Dimension(100, 40));
         Izquierda.add(jLNombre);
 
+        jTFNombre.setPreferredSize(new java.awt.Dimension(100, 35));
+        jTFNombre.setRequestFocusEnabled(false);
+        Izquierda.add(jTFNombre);
+
         jLDomicilio.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
         jLDomicilio.setText("Domicilio:");
         jLDomicilio.setMinimumSize(new java.awt.Dimension(100, 40));
         jLDomicilio.setPreferredSize(new java.awt.Dimension(100, 40));
         Izquierda.add(jLDomicilio);
-
-        jLCelular.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
-        jLCelular.setText("Celular:");
-        jLCelular.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLCelular.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLCelular);
-
-        jLCorreoE.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
-        jLCorreoE.setText("EMail:");
-        jLCorreoE.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLCorreoE.setPreferredSize(new java.awt.Dimension(110, 40));
-        Izquierda.add(jLCorreoE);
-
-        jLPuesto.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
-        jLPuesto.setText("Puesto:");
-        jLPuesto.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLPuesto.setPreferredSize(new java.awt.Dimension(100, 40));
-        Izquierda.add(jLPuesto);
-
-        jLFechaIng.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
-        jLFechaIng.setText("Fecha de Ingreso:");
-        jLFechaIng.setMinimumSize(new java.awt.Dimension(100, 40));
-        jLFechaIng.setPreferredSize(new java.awt.Dimension(100, 40));
-        jLFechaIng.setRequestFocusEnabled(false);
-        Izquierda.add(jLFechaIng);
-
-        jPanel3.add(Izquierda, java.awt.BorderLayout.WEST);
-
-        org.jdesktop.swingx.VerticalLayout verticalLayout1 = new org.jdesktop.swingx.VerticalLayout();
-        verticalLayout1.setGap(5);
-        Derecha.setLayout(verticalLayout1);
-
-        jTFClave.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jTFClave);
-
-        jTFNombre.setPreferredSize(new java.awt.Dimension(100, 35));
-        jTFNombre.setRequestFocusEnabled(false);
-        Derecha.add(jTFNombre);
 
         jTFDomicilio.setToolTipText("");
         jTFDomicilio.setPreferredSize(new java.awt.Dimension(100, 35));
@@ -206,10 +160,22 @@ public class Employees extends javax.swing.JPanel {
                 jTFDomicilioActionPerformed(evt);
             }
         });
-        Derecha.add(jTFDomicilio);
+        Izquierda.add(jTFDomicilio);
+
+        jLCelular.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLCelular.setText("Celular:");
+        jLCelular.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLCelular.setPreferredSize(new java.awt.Dimension(100, 40));
+        Izquierda.add(jLCelular);
 
         jTFCelular.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jTFCelular);
+        Izquierda.add(jTFCelular);
+
+        jLCorreoE.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLCorreoE.setText("Correo Electronico:");
+        jLCorreoE.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLCorreoE.setPreferredSize(new java.awt.Dimension(110, 40));
+        Izquierda.add(jLCorreoE);
 
         jTFCorreoE.setPreferredSize(new java.awt.Dimension(100, 35));
         jTFCorreoE.addActionListener(new java.awt.event.ActionListener() {
@@ -217,18 +183,56 @@ public class Employees extends javax.swing.JPanel {
                 jTFCorreoEActionPerformed(evt);
             }
         });
-        Derecha.add(jTFCorreoE);
+        Izquierda.add(jTFCorreoE);
+
+        jPanel3.add(Izquierda);
+
+        Centro.setPreferredSize(new java.awt.Dimension(450, 300));
+        Centro.setLayout(new java.awt.GridLayout(5, 2, 0, 40));
+
+        jLPuesto.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLPuesto.setText("Puesto:");
+        jLPuesto.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLPuesto.setPreferredSize(new java.awt.Dimension(100, 40));
+        Centro.add(jLPuesto);
 
         jCBPuesto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jCBPuesto.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jCBPuesto);
+        Centro.add(jCBPuesto);
+
+        jLFechaIng.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
+        jLFechaIng.setText("Fecha de Ingreso:");
+        jLFechaIng.setMinimumSize(new java.awt.Dimension(100, 40));
+        jLFechaIng.setPreferredSize(new java.awt.Dimension(100, 40));
+        jLFechaIng.setRequestFocusEnabled(false);
+        Centro.add(jLFechaIng);
 
         jXDPCalendario.setPreferredSize(new java.awt.Dimension(100, 35));
-        Derecha.add(jXDPCalendario);
+        Centro.add(jXDPCalendario);
+        Centro.add(jLabel3);
+        Centro.add(jLabel1);
 
-        jPanel3.add(Derecha, java.awt.BorderLayout.CENTER);
+        jPanel3.add(Centro);
 
-        jPDatosEmpleado.add(jPanel3, java.awt.BorderLayout.CENTER);
+        Derecha.setPreferredSize(new java.awt.Dimension(200, 300));
+        Derecha.setLayout(new org.jdesktop.swingx.VerticalLayout());
+
+        Photo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Photo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Photo.setPreferredSize(new java.awt.Dimension(200, 200));
+        Derecha.add(Photo);
+
+        jLabel2.setFont(new java.awt.Font("Book Antiqua", 3, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Foto");
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Derecha.add(jLabel2);
+
+        jPanel3.add(Derecha);
+
+        jScrollPane1.setViewportView(jPanel3);
+
+        jPDatosEmpleado.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         jPanelCenter.add(jPDatosEmpleado, java.awt.BorderLayout.CENTER);
 
@@ -245,6 +249,7 @@ public class Employees extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Centro;
     private javax.swing.JPanel Derecha;
     private javax.swing.JPanel Izquierda;
     public javax.swing.JLabel Photo;
@@ -260,18 +265,22 @@ public class Employees extends javax.swing.JPanel {
     private javax.swing.JLabel jLFechaIng;
     private javax.swing.JLabel jLNombre;
     private javax.swing.JLabel jLPuesto;
-    private javax.swing.JPanel jPDatosEmpleado;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    public javax.swing.JPanel jPDatosEmpleado;
     private javax.swing.JPanel jPFoto;
-    private javax.swing.JPanel jPanel3;
+    public javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelCenter;
-    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JToolBar jTBContenedorBontones;
-    private javax.swing.JTable jTClaveEmp;
     private javax.swing.JTextField jTFCelular;
     private javax.swing.JTextField jTFClave;
     private javax.swing.JTextField jTFCorreoE;
     private javax.swing.JTextField jTFDomicilio;
     private javax.swing.JTextField jTFNombre;
     private org.jdesktop.swingx.JXDatePicker jXDPCalendario;
+    private org.jdesktop.swingx.JXTable jXTable1;
     // End of variables declaration//GEN-END:variables
 }

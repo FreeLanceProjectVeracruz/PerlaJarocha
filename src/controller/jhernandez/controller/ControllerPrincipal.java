@@ -51,11 +51,16 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
     private Login viewLogin;
 
     private JXPanelIntro viewPromotions;
+    private Buys viewBuys;
+    private Sales viewSales;
 
     private Employees viewEmployees;
     private Providers viewProviders;
     private Clients viewClients;
     private Services viewServices;
+    private Drinks viewDrinks;
+    private Foods viewFoods;
+    private Snacks viewSnacks;
     // </editor-fold>
 
     // <editor-fold defaultstate="expanded" desc="Private fields Controllers">
@@ -72,6 +77,9 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
     private JCommandButton providers;
     private JCommandButton clients;
     private JCommandButton services;
+    private JCommandButton drinks;
+    private JCommandButton foods;
+    private JCommandButton snacks;
     // </editor-fold>
 
     // <editor-fold defaultstate="expanded" desc="Constructor">
@@ -126,6 +134,9 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         this.providers.addActionListener(this);
         this.clients.addActionListener(this);
         this.services.addActionListener(this);
+        this.drinks.addActionListener(this);
+        this.foods.addActionListener(this);
+        this.snacks.addActionListener(this);
     }
 
     @Override
@@ -134,11 +145,16 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         this.viewLogin = new Login(this.viewPrincipal, true);
         this.modelLogin.addObserver(this.viewPrincipal);
 
-//        this.viewPromotions = new JXPanelIntro();
+        this.viewBuys = new Buys();
+        this.viewSales = new Sales();
+
         this.viewEmployees = new Employees();
         this.viewProviders = new Providers();
         this.viewClients = new Clients();
         this.viewServices = new Services();
+        this.viewDrinks = new Drinks();
+        this.viewFoods = new Foods();
+        this.viewSnacks = new Snacks();
 
         this.controllerLogin = new ControllerLogin(this.viewLogin, this.modelLogin);
         this.controllerEmployee = new ControllerEmployees(this.viewEmployees);
@@ -166,6 +182,26 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
                         flag = true;
                     }
                     index = tPane.indexOfComponent(this.viewPromotions);
+                } else {
+
+                }
+            } else if (control.equals(this.buy)) {
+                if (this.viewBuys != null) {
+                    if (tPane.indexOfTab(this.buy.getText()) == -1) {
+                        tPane.add(this.buy.getText(), this.viewBuys);
+                        flag = true;
+                    }
+                    index = tPane.indexOfComponent(this.viewBuys);
+                } else {
+
+                }
+            } else if (control.equals(this.sale)) {
+                if (this.viewSales != null) {
+                    if (tPane.indexOfTab(this.sale.getText()) == -1) {
+                        tPane.add(this.sale.getText(), this.viewSales);
+                        flag = true;
+                    }
+                    index = tPane.indexOfComponent(this.viewSales);
                 } else {
 
                 }
@@ -209,8 +245,37 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
                 } else {
 
                 }
-            }
+            } else if (control.equals(this.drinks)) {
+                if (this.viewDrinks != null) {
+                    if (tPane.indexOfTab(this.drinks.getText()) == -1) {
+                        tPane.add(this.drinks.getText(), this.viewDrinks);
+                        flag = true;
+                    }
+                    index = tPane.indexOfComponent(this.viewDrinks);
+                } else {
 
+                }
+            } else if (control.equals(this.foods)) {
+                if (this.viewFoods != null) {
+                    if (tPane.indexOfTab(this.foods.getText()) == -1) {
+                        tPane.add(this.foods.getText(), this.viewFoods);
+                        flag = true;
+                    }
+                    index = tPane.indexOfComponent(this.viewFoods);
+                } else {
+
+                }
+            } else if (control.equals(this.snacks)) {
+                if (this.viewSnacks != null) {
+                    if (tPane.indexOfTab(this.snacks.getText()) == -1) {
+                        tPane.add(this.snacks.getText(), this.viewSnacks);
+                        flag = true;
+                    }
+                    index = tPane.indexOfComponent(this.viewSnacks);
+                } else {
+
+                }
+            }
             this.initTabComponent(flag, index);
         }
     }
@@ -446,13 +511,13 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         this.viewPrincipal.register.addCommandButton(this.clients, MEDIUM);
         this.viewPrincipal.register.addCommandButton(this.services, LOW);
 
-        JCommandButton button5 = new JCommandButton("Bebidas", UtilsImages.getResizableIcon(this.viewPrincipal.getClass().getResource(Images.Bebidas.getRuta()), 48, 48));
-        JCommandButton button6 = new JCommandButton("Alimentos", UtilsImages.getResizableIcon(this.viewPrincipal.getClass().getResource(Images.Alimentos.getRuta()), 48, 48));
-        JCommandButton button7 = new JCommandButton("Otros", UtilsImages.getResizableIcon(this.viewPrincipal.getClass().getResource(Images.Otros.getRuta()), 48, 48));
+        this.drinks = new JCommandButton("Bebidas", UtilsImages.getResizableIcon(this.viewPrincipal.getClass().getResource(Images.Bebidas.getRuta()), 48, 48));
+        this.foods = new JCommandButton("Alimentos", UtilsImages.getResizableIcon(this.viewPrincipal.getClass().getResource(Images.Alimentos.getRuta()), 48, 48));
+        this.snacks = new JCommandButton("Otros", UtilsImages.getResizableIcon(this.viewPrincipal.getClass().getResource(Images.Otros.getRuta()), 48, 48));
 
-        this.viewPrincipal.store.addCommandButton(button5, TOP);
-        this.viewPrincipal.store.addCommandButton(button6, TOP);
-        this.viewPrincipal.store.addCommandButton(button7, TOP);
+        this.viewPrincipal.store.addCommandButton(this.drinks, TOP);
+        this.viewPrincipal.store.addCommandButton(this.foods, TOP);
+        this.viewPrincipal.store.addCommandButton(this.snacks, TOP);
 
         /**
          *
@@ -668,7 +733,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         //CENTER
         this.horario = new JLabel();
         this.horario.setHorizontalTextPosition(JLabel.CENTER);
-        this.horario.setHorizontalAlignment(JLabel.RIGHT);
+        this.horario.setHorizontalAlignment(JLabel.CENTER);
 
         this.formato = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         this.dataSistema = new Date();
