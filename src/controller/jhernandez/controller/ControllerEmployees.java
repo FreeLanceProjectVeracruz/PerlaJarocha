@@ -1,20 +1,16 @@
 package controller.jhernandez.controller;
 
-import controller.jhernandez.utils.UtilsImages;
-import java.awt.Image;
+import controller.jhernandez.utils.*;
+import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import model.jhernandez.enums.Images;
 import model.jhernandez.interfaces.IControllerBase;
+import org.jdesktop.swingx.decorator.*;
 import view.jhernandez.modals.Employees;
 import view.jhernandez.utils.FileChooser;
 
@@ -46,6 +42,9 @@ public class ControllerEmployees implements IControllerBase, ActionListener, Mou
         this.viewEmployees.jBBuscar.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Images.Buscar.getRuta()), 45, 45));
         this.viewEmployees.jBEliminar.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Images.Eliminar.getRuta()), 45, 45));
         this.viewEmployees.Photo.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Images.NoPhoto.getRuta()), 100, 100));
+
+        this.setNorthPanel();
+        this.enableComponents(this.viewEmployees.jPDatosEmpleado, false);
     }
 
     @Override
@@ -60,13 +59,17 @@ public class ControllerEmployees implements IControllerBase, ActionListener, Mou
     }
     // </editor-fold>
 
+    // <editor-fold defaultstate="expanded" desc="Implementación ActionListener">
     @Override
     public void actionPerformed(ActionEvent e) {
         Object control = e.getSource();
         if (control.equals(this.viewEmployees.jBAgregar)) {
+            this.enableComponents(this.viewEmployees.jPDatosEmpleado, true);
         }
     }
+    // </editor-fold>
 
+    // <editor-fold defaultstate="expanded" desc="Implementación MouseListener">
     @Override
     public void mouseClicked(MouseEvent e) {
         int resultado;
@@ -109,5 +112,34 @@ public class ControllerEmployees implements IControllerBase, ActionListener, Mou
 
     @Override
     public void mouseExited(MouseEvent e) {
+    }
+    // </editor-fold>
+
+    private void setNorthPanel() {
+        this.viewEmployees.jxTableEmployees.setModel(new EmployeesTableModel());
+        this.viewEmployees.jxTableEmployees.setColumnControlVisible(true);
+        this.viewEmployees.jxTableEmployees.setShowHorizontalLines(true);
+        this.viewEmployees.jxTableEmployees.setShowVerticalLines(true);
+
+        this.viewEmployees.jxTableEmployees.addHighlighter(HighlighterFactory.createAlternateStriping());
+
+//        Color lightBlue = new Color(0xC0D9D9);
+//        Color gold = new Color(0xDBDB70);
+//        this.viewEmployees.jxTableEmployees.addHighlighter(HighlighterFactory.createAlternateStriping(lightBlue, gold));
+//        this.viewEmployees.jxTableEmployees.addHighlighter(new ColorHighlighter(HighlightPredicate.ROLLOVER_ROW,
+//                new Color(0x330000ff, true), Color.BLACK));
+
+        /* On agrandit les colonnes au maximum */
+        this.viewEmployees.jxTableEmployees.packAll();
+    }
+
+    private void enableComponents(Container container, boolean enable) {
+        Component[] components = container.getComponents();
+        for (Component component : components) {
+            component.setEnabled(enable);
+            if (component instanceof Container) {
+                enableComponents((Container) component, enable);
+            }
+        }
     }
 }

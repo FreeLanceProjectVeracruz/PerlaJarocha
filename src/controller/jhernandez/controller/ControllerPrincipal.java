@@ -172,7 +172,8 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         } else {
             boolean flag = false;
             int index = -1;
-
+            Component vista = null;
+            
             if (control.equals(this.promotions)) {
                 // Si ya esta creada la vista
                 if (this.viewPromotions != null) {
@@ -206,15 +207,16 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
 
                 }
             } else if (control.equals(this.employees)) {
-                if (this.viewEmployees != null) {
-                    if (tPane.indexOfTab(this.employees.getText()) == -1) {
-                        tPane.add(this.employees.getText(), this.viewEmployees);
-                        flag = true;
-                    }
-                    index = tPane.indexOfComponent(this.viewEmployees);
-                } else {
-
+                if (this.viewEmployees == null) {
+                    this.viewEmployees = new Employees();
                 }
+
+                if (tPane.indexOfTab(this.employees.getText()) == -1) {
+                    tPane.add(this.employees.getText(), this.viewEmployees);
+                    flag = true;
+                }
+                index = tPane.indexOfComponent(this.viewEmployees);
+                vista = this.viewEmployees;
             } else if (control.equals(this.providers)) {
                 if (this.viewProviders != null) {
                     if (tPane.indexOfTab(this.providers.getText()) == -1) {
@@ -276,7 +278,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
 
                 }
             }
-            this.initTabComponent(flag, index);
+            this.initTabComponent(flag, index, vista);
         }
     }
     // </editor-fold>
@@ -576,13 +578,13 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
         this.viewPromotions = new JXPanelIntro();
 
         tPane.add(this.promotions.getText(), this.viewPromotions);
-        this.initTabComponent(true, tPane.indexOfComponent(this.viewPromotions));
+        this.initTabComponent(true, tPane.indexOfComponent(this.viewPromotions), this.viewPromotions);
         this.viewPrincipal.add(this.tPane, BorderLayout.CENTER);
     }
 
-    private void initTabComponent(boolean createTab, int index) {
+    private void initTabComponent(boolean createTab, int index, Component selectedPanel) {
         if (createTab) {
-            tPane.setTabComponentAt(tPane.getTabCount() - 1, new JPanelTabComponent(tPane));
+            tPane.setTabComponentAt(tPane.getTabCount() - 1, new JPanelTabComponent(tPane, selectedPanel));
         }
         if (index >= 0) {
             tPane.setSelectedIndex(index);

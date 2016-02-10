@@ -22,16 +22,17 @@ public class Employees extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTBContenedorBontones = new javax.swing.JToolBar();
+        jTBContenedorBotones = new javax.swing.JToolBar();
         jBAgregar = new javax.swing.JButton();
         jBEliminar = new javax.swing.JButton();
         jBBuscar = new javax.swing.JButton();
         jBModificar = new javax.swing.JButton();
         jPanelCenter = new javax.swing.JPanel();
+        jPCheckBox = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jXTable1 = new org.jdesktop.swingx.JXTable();
+        jxTableEmployees = new org.jdesktop.swingx.JXTable();
         jPDatosEmpleado = new javax.swing.JPanel();
-        jPFoto = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         Izquierda = new javax.swing.JPanel();
@@ -58,66 +59,58 @@ public class Employees extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
-        jTBContenedorBontones.setFloatable(false);
-        jTBContenedorBontones.setRollover(true);
+        jTBContenedorBotones.setFloatable(false);
+        jTBContenedorBotones.setRollover(true);
 
         jBAgregar.setForeground(new java.awt.Color(255, 255, 255));
         jBAgregar.setText("Agregar");
         jBAgregar.setFocusable(false);
         jBAgregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBAgregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jTBContenedorBontones.add(jBAgregar);
+        jTBContenedorBotones.add(jBAgregar);
 
         jBEliminar.setForeground(new java.awt.Color(255, 255, 255));
         jBEliminar.setText("Eliminar");
         jBEliminar.setFocusable(false);
         jBEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBEliminar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jTBContenedorBontones.add(jBEliminar);
+        jTBContenedorBotones.add(jBEliminar);
 
         jBBuscar.setForeground(new java.awt.Color(255, 255, 255));
         jBBuscar.setText("Buscar");
         jBBuscar.setFocusable(false);
         jBBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBBuscar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jTBContenedorBontones.add(jBBuscar);
+        jTBContenedorBotones.add(jBBuscar);
 
         jBModificar.setForeground(new java.awt.Color(255, 255, 255));
         jBModificar.setText("Modificar");
         jBModificar.setFocusable(false);
         jBModificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBModificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jTBContenedorBontones.add(jBModificar);
+        jTBContenedorBotones.add(jBModificar);
 
-        add(jTBContenedorBontones, java.awt.BorderLayout.PAGE_START);
+        add(jTBContenedorBotones, java.awt.BorderLayout.PAGE_START);
 
         jPanelCenter.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos del empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Book Antiqua", 3, 14))); // NOI18N
         jPanelCenter.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(302, 300));
+        jPCheckBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        jXTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jXTable1.setShowGrid(true);
-        jXTable1.setShowVerticalLines(false);
-        jScrollPane2.setViewportView(jXTable1);
+        jCheckBox1.setText("Mostrar todos");
+        jPCheckBox.add(jCheckBox1);
+
+        jPanelCenter.add(jPCheckBox, java.awt.BorderLayout.NORTH);
+
+        jxTableEmployees.setToolTipText("");
+        jxTableEmployees.setPreferredSize(new java.awt.Dimension(300, 200));
+        jxTableEmployees.setShowGrid(true);
+        jScrollPane2.setViewportView(jxTableEmployees);
 
         jPanelCenter.add(jScrollPane2, java.awt.BorderLayout.NORTH);
 
         jPDatosEmpleado.setPreferredSize(new java.awt.Dimension(978, 450));
         jPDatosEmpleado.setLayout(new java.awt.BorderLayout());
-
-        jPFoto.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-        jPDatosEmpleado.add(jPFoto, java.awt.BorderLayout.PAGE_START);
 
         jScrollPane1.setOpaque(false);
         jScrollPane1.setPreferredSize(new java.awt.Dimension(966, 316));
@@ -155,11 +148,6 @@ public class Employees extends javax.swing.JPanel {
 
         jTFDomicilio.setToolTipText("");
         jTFDomicilio.setPreferredSize(new java.awt.Dimension(100, 35));
-        jTFDomicilio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTFDomicilioActionPerformed(evt);
-            }
-        });
         Izquierda.add(jTFDomicilio);
 
         jLCelular.setFont(new java.awt.Font("Book Antiqua", 3, 14)); // NOI18N
@@ -178,11 +166,6 @@ public class Employees extends javax.swing.JPanel {
         Izquierda.add(jLCorreoE);
 
         jTFCorreoE.setPreferredSize(new java.awt.Dimension(100, 35));
-        jTFCorreoE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTFCorreoEActionPerformed(evt);
-            }
-        });
         Izquierda.add(jTFCorreoE);
 
         jPanel3.add(Izquierda);
@@ -239,14 +222,6 @@ public class Employees extends javax.swing.JPanel {
         add(jPanelCenter, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTFDomicilioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFDomicilioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTFDomicilioActionPerformed
-
-    private void jTFCorreoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCorreoEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTFCorreoEActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Centro;
@@ -258,6 +233,7 @@ public class Employees extends javax.swing.JPanel {
     public javax.swing.JButton jBEliminar;
     public javax.swing.JButton jBModificar;
     private javax.swing.JComboBox jCBPuesto;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLCelular;
     private javax.swing.JLabel jLClave;
     private javax.swing.JLabel jLCorreoE;
@@ -268,19 +244,19 @@ public class Employees extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPCheckBox;
     public javax.swing.JPanel jPDatosEmpleado;
-    private javax.swing.JPanel jPFoto;
     public javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelCenter;
     public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JToolBar jTBContenedorBontones;
+    private javax.swing.JToolBar jTBContenedorBotones;
     private javax.swing.JTextField jTFCelular;
     private javax.swing.JTextField jTFClave;
     private javax.swing.JTextField jTFCorreoE;
     private javax.swing.JTextField jTFDomicilio;
     private javax.swing.JTextField jTFNombre;
     private org.jdesktop.swingx.JXDatePicker jXDPCalendario;
-    private org.jdesktop.swingx.JXTable jXTable1;
+    public org.jdesktop.swingx.JXTable jxTableEmployees;
     // End of variables declaration//GEN-END:variables
 }

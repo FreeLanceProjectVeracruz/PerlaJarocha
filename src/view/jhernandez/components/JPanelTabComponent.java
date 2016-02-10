@@ -14,7 +14,7 @@ public class JPanelTabComponent extends JPanel {
     // </editor-fold>
 
     // <editor-fold defaultstate="expanded" desc="Constructor">
-    public JPanelTabComponent(final JTabbedPane pane) {
+    public JPanelTabComponent(final JTabbedPane pane, Component vista) {
         //unset default FlowLayout' gaps
         super(new FlowLayout(FlowLayout.LEFT, 0, 0));
         if (pane == null) {
