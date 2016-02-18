@@ -8,6 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import model.jhernandez.enums.Icons;
 import model.jhernandez.enums.Images;
 import model.jhernandez.interfaces.IControllerBase;
 import org.jdesktop.swingx.decorator.*;
@@ -42,6 +43,12 @@ public class ControllerEmployees implements IControllerBase, ActionListener, Mou
         this.viewEmployees.jBBuscar.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Images.Buscar.getRuta()), 45, 45));
         this.viewEmployees.jBEliminar.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Images.Eliminar.getRuta()), 45, 45));
         this.viewEmployees.Photo.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Images.NoPhoto.getRuta()), 100, 100));
+
+        this.viewEmployees.btnFirst.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Icons.GoFirst.getRuta()), 18, 18));
+        this.viewEmployees.btnLast.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Icons.GoLast.getRuta()), 18, 18));
+        this.viewEmployees.btnNext.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Icons.GoNext.getRuta()), 18, 18));
+        this.viewEmployees.btnPrevious.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Icons.GoPrevious.getRuta()), 18, 18));
+        this.viewEmployees.btnRefresh.setIcon(UtilsImages.getResizableIcon(this.viewEmployees.getClass().getResource(Icons.ViewRefresh.getRuta()), 18, 18));
 
         this.setNorthPanel();
         this.enableComponents(this.viewEmployees.jPDatosEmpleado, false);

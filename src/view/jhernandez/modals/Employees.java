@@ -28,10 +28,27 @@ public class Employees extends javax.swing.JPanel {
         jBBuscar = new javax.swing.JButton();
         jBModificar = new javax.swing.JButton();
         jPanelCenter = new javax.swing.JPanel();
+        jPNorth = new javax.swing.JPanel();
         jPCheckBox = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
         jxTableEmployees = new org.jdesktop.swingx.JXTable();
+        jToolBar1 = new javax.swing.JToolBar();
+        cmbPageSize = new javax.swing.JComboBox();
+        jSeparator3 = new javax.swing.JToolBar.Separator();
+        btnFirst = new javax.swing.JButton();
+        btnPrevious = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JToolBar.Separator();
+        jLabel19 = new javax.swing.JLabel();
+        txtPageNumber = new javax.swing.JTextField();
+        lblPageOf = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JToolBar.Separator();
+        btnNext = new javax.swing.JButton();
+        btnLast = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JToolBar.Separator();
+        btnRefresh = new javax.swing.JButton();
+        jSeparator6 = new javax.swing.JToolBar.Separator();
+        lblTotalRecord = new javax.swing.JLabel();
         jPDatosEmpleado = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
@@ -93,21 +110,86 @@ public class Employees extends javax.swing.JPanel {
         add(jTBContenedorBotones, java.awt.BorderLayout.PAGE_START);
 
         jPanelCenter.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos del empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Book Antiqua", 3, 14))); // NOI18N
-        jPanelCenter.setLayout(new java.awt.BorderLayout());
+        jPanelCenter.setLayout(new java.awt.BorderLayout(0, 5));
+
+        jPNorth.setPreferredSize(new java.awt.Dimension(300, 200));
+        jPNorth.setLayout(new java.awt.BorderLayout(0, 2));
 
         jPCheckBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         jCheckBox1.setText("Mostrar todos");
         jPCheckBox.add(jCheckBox1);
 
-        jPanelCenter.add(jPCheckBox, java.awt.BorderLayout.NORTH);
+        jPNorth.add(jPCheckBox, java.awt.BorderLayout.NORTH);
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(300, 200));
 
         jxTableEmployees.setToolTipText("");
         jxTableEmployees.setPreferredSize(new java.awt.Dimension(300, 200));
         jxTableEmployees.setShowGrid(true);
         jScrollPane2.setViewportView(jxTableEmployees);
 
-        jPanelCenter.add(jScrollPane2, java.awt.BorderLayout.NORTH);
+        jPNorth.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        jToolBar1.setBorder(null);
+        jToolBar1.setFloatable(false);
+        jToolBar1.setRollover(true);
+        jToolBar1.setMargin(new java.awt.Insets(2, 0, 2, 0));
+
+        cmbPageSize.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "20", "50", "100" }));
+        jToolBar1.add(cmbPageSize);
+        jToolBar1.add(jSeparator3);
+
+        btnFirst.setFocusable(false);
+        btnFirst.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFirst.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnFirst);
+
+        btnPrevious.setFocusable(false);
+        btnPrevious.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPrevious.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnPrevious);
+        jToolBar1.add(jSeparator4);
+
+        jLabel19.setText("Página");
+        jLabel19.setToolTipText("");
+        jToolBar1.add(jLabel19);
+
+        txtPageNumber.setEditable(false);
+        txtPageNumber.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPageNumber.setText("1");
+        txtPageNumber.setMaximumSize(new java.awt.Dimension(24, 30));
+        txtPageNumber.setMinimumSize(new java.awt.Dimension(24, 30));
+        txtPageNumber.setPreferredSize(new java.awt.Dimension(24, 30));
+        jToolBar1.add(txtPageNumber);
+
+        lblPageOf.setText("de 0");
+        jToolBar1.add(lblPageOf);
+        jToolBar1.add(jSeparator5);
+
+        btnNext.setFocusable(false);
+        btnNext.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnNext.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnNext);
+
+        btnLast.setFocusable(false);
+        btnLast.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLast.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnLast);
+        jToolBar1.add(jSeparator2);
+
+        btnRefresh.setFocusable(false);
+        btnRefresh.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRefresh.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnRefresh);
+        jToolBar1.add(jSeparator6);
+
+        lblTotalRecord.setText("Registro Total 0 filas.");
+        jToolBar1.add(lblTotalRecord);
+
+        jPNorth.add(jToolBar1, java.awt.BorderLayout.PAGE_END);
+
+        jPanelCenter.add(jPNorth, java.awt.BorderLayout.NORTH);
 
         jPDatosEmpleado.setPreferredSize(new java.awt.Dimension(978, 450));
         jPDatosEmpleado.setLayout(new java.awt.BorderLayout());
@@ -228,6 +310,12 @@ public class Employees extends javax.swing.JPanel {
     private javax.swing.JPanel Derecha;
     private javax.swing.JPanel Izquierda;
     public javax.swing.JLabel Photo;
+    public javax.swing.JButton btnFirst;
+    public javax.swing.JButton btnLast;
+    public javax.swing.JButton btnNext;
+    public javax.swing.JButton btnPrevious;
+    public javax.swing.JButton btnRefresh;
+    private javax.swing.JComboBox cmbPageSize;
     public javax.swing.JButton jBAgregar;
     public javax.swing.JButton jBBuscar;
     public javax.swing.JButton jBEliminar;
@@ -242,21 +330,32 @@ public class Employees extends javax.swing.JPanel {
     private javax.swing.JLabel jLNombre;
     private javax.swing.JLabel jLPuesto;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPCheckBox;
     public javax.swing.JPanel jPDatosEmpleado;
+    private javax.swing.JPanel jPNorth;
     public javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelCenter;
     public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JToolBar.Separator jSeparator2;
+    private javax.swing.JToolBar.Separator jSeparator3;
+    private javax.swing.JToolBar.Separator jSeparator4;
+    private javax.swing.JToolBar.Separator jSeparator5;
+    private javax.swing.JToolBar.Separator jSeparator6;
     private javax.swing.JToolBar jTBContenedorBotones;
     private javax.swing.JTextField jTFCelular;
     private javax.swing.JTextField jTFClave;
     private javax.swing.JTextField jTFCorreoE;
     private javax.swing.JTextField jTFDomicilio;
     private javax.swing.JTextField jTFNombre;
+    private javax.swing.JToolBar jToolBar1;
     private org.jdesktop.swingx.JXDatePicker jXDPCalendario;
     public org.jdesktop.swingx.JXTable jxTableEmployees;
+    private javax.swing.JLabel lblPageOf;
+    private javax.swing.JLabel lblTotalRecord;
+    private javax.swing.JTextField txtPageNumber;
     // End of variables declaration//GEN-END:variables
 }

@@ -14,7 +14,12 @@ public enum Icons {
     Printer("/view/jhernandez/icons/printer.png"),
     Save("/view/jhernandez/icons/database_save.png"),
     ZoomIn("/view/jhernandez/icons/magnifier_zoom_in.png"),
-    ZoomOut("/view/jhernandez/icons/magifier_zoom_out.png");
+    ZoomOut("/view/jhernandez/icons/magifier_zoom_out.png"),
+    GoFirst("/view/jhernandez/icons/go-first.png"),
+    GoLast("/view/jhernandez/icons/go-last.png"),
+    GoNext("/view/jhernandez/icons/go-next.png"),
+    GoPrevious("/view/jhernandez/icons/go-previous.png"),
+    ViewRefresh("/view/jhernandez/icons/view-refresh.png");
 
     String iconfilename;
 
