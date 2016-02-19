@@ -22,19 +22,69 @@ public class Clients extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jTBContenedorBotones = new javax.swing.JToolBar();
+        jBAgregar = new javax.swing.JButton();
+        jBEliminar = new javax.swing.JButton();
+        jBBuscar = new javax.swing.JButton();
+        jBModificar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+
+        setLayout(new java.awt.BorderLayout());
+
+        jTBContenedorBotones.setFloatable(false);
+        jTBContenedorBotones.setRollover(true);
+
+        jBAgregar.setForeground(new java.awt.Color(255, 255, 255));
+        jBAgregar.setText("Agregar");
+        jBAgregar.setFocusable(false);
+        jBAgregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBAgregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jTBContenedorBotones.add(jBAgregar);
+
+        jBEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        jBEliminar.setText("Eliminar");
+        jBEliminar.setFocusable(false);
+        jBEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBEliminar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jTBContenedorBotones.add(jBEliminar);
+
+        jBBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        jBBuscar.setText("Buscar");
+        jBBuscar.setFocusable(false);
+        jBBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBBuscar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jTBContenedorBotones.add(jBBuscar);
+
+        jBModificar.setForeground(new java.awt.Color(255, 255, 255));
+        jBModificar.setText("Modificar");
+        jBModificar.setFocusable(false);
+        jBModificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBModificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jTBContenedorBotones.add(jBModificar);
+
+        add(jTBContenedorBotones, java.awt.BorderLayout.PAGE_START);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1003, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 351, Short.MAX_VALUE)
         );
+
+        add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton jBAgregar;
+    public javax.swing.JButton jBBuscar;
+    public javax.swing.JButton jBEliminar;
+    public javax.swing.JButton jBModificar;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JToolBar jTBContenedorBotones;
     // End of variables declaration//GEN-END:variables
 }

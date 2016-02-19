@@ -39,7 +39,11 @@ public enum Images {
     Eliminar("/view/jhernandez/images/remover.png"), 
     Buscar("/view/jhernandez/images/buscar.png"), 
     Modificar("/view/jhernandez/images/editar.png"), 
-    NoPhoto("/view/jhernandez/images/noFoto.png");
+    NoPhoto("/view/jhernandez/images/noFoto.png"),
+    agregarCliente("/view/jhernandez/images/agregarCliente.png"),
+    eliminarCliente("/view/jhernandez/images/eliminarCliente.png"),
+    buscarCliente("/view/jhernandez/images/buscarCliente.png"),
+    modificarCliente("/view/jhernandez/images/modificarCliente.png");
 
     String imagefilename;
 

@@ -66,6 +66,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
     // <editor-fold defaultstate="expanded" desc="Private fields Controllers">
     private ControllerLogin controllerLogin;
     private ControllerEmployees controllerEmployee;
+    private ControllerClients controllerClients;
     // </editor-fold>
 
     // <editor-fold defaultstate="expanded" desc="Private fields JCommandButton">
@@ -158,6 +159,7 @@ public class ControllerPrincipal implements IControllerBase, ActionListener {
 
         this.controllerLogin = new ControllerLogin(this.viewLogin, this.modelLogin);
         this.controllerEmployee = new ControllerEmployees(this.viewEmployees);
+        this.controllerClients = new ControllerClients(this.viewClients);
     }
     // </editor-fold>
 
